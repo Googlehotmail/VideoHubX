@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoHubX - Naruto Edition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff4500;
+            padding: 20px 0;
+            font-size: 36px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #eaeaea;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff4500;
+            color: #fff;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video {
+            background-color: #2a2a2a;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            width: 560px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .video:hover {
+            transform: scale(1.05);
+        }
+
+        .video h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff4500;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #eaeaea;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        #episodios, #personagens, #contato {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li span {
+            color: #ff4500;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home'); // Mostrar a seção inicial "Home"
+        });
+    </script>
+</head>
+<body>
+    <h1>VideoHubX - Naruto Edition</h1>
+
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('episodios')">Episódios</a>
+        <a href="#" onclick="showSection('personagens')">Personagens</a>
+        <a href="#" onclick="showSection('contato')">Contato</a>
+    </div>
+
+    <section id="home">
+        <div class="video-container">
+            <div class="video">
+                <h2>Episódio 1: Naruto Uzumaki</h2>
+                <iframe src="https://www.youtube.com/embed/fTVpFn0Mb3Q?si=-sz-x2UqCMFREQSX" title="Naruto Episode 1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="video">
+                <h2>Episódio 2: O Nascimento de Naruto</h2>
+                <iframe src="https://www.youtube.com/embed/0_o80MW34OM?si=GWAxd-V7bgRZ804J" title="Naruto Episode 2" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="video">
+                <h2>Episódio 3: Sasuke Uchiha</h2>
+                <iframe src="https://www.youtube.com/embed/Wufm2jRYz1Y?si=aGxw7Q9kdHK3pKlP" title="Naruto Episode 3" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="video">
+                <h2>Episódio 4: A Caminhada de Naruto</h2>
+                <iframe src="https://www.youtube.com/embed/rzhuEErfxS8?si=s9Dmz079Knh5HLKR" title="Naruto Episode 4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="video">
+                <h2>Episódio 5: O Caminho Ninja</h2>
+                <iframe src="https://www.youtube.com/embed/wBVvi-i7uvU?si=rCCLC33eBm9E0ivK" title="Naruto Episode 5" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodios">
+        <h2 style="text-align: center; color: #ff4500;">Todos os Episódios</h2>
+        <ul>
+            <li>001. Naruto Uzumaki</li>
+            <li>002. O Nascimento de Naruto</li>
+            <li>003. Sasuke Uchiha</li>
+            <li>004. A Caminhada de Naruto</li>
+            <li>005. O Caminho Ninja</li>
+            <!-- Adicione todos os episódios subsequentes -->
+        </ul>
+    </section>
+
+    <section id="personagens">
+        <h2 style="text-align: center; color: #ff4500;">Personagens Principais</h2>
+        <ul>
+            <li><span>Naruto Uzumaki</span></li>
+            <li><span>Sasuke Uchiha</span></li>
+            <li><span>Sakura Haruno</span></li>
+            <li><span>Kakashi Hatake</span></li>
+            <li><span>Hinata Hyuga</span></li>
+            <li><span>Gaara</span></li>
+            <li><span>Shikamaru Nara</span></li>
+            <li><span>Rock Lee</span></li>
+            <li><span>Neji Hyuga</span></li>
+            <li><span>Tsunade</span></li>
+            <li><span>Jiraiya</span></li>
+            <li><span>Orochimaru</span></li>
+            <!-- Adicione mais personagens conforme necessário -->
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2 style="text-align: center; color: #ff4500;">Contato</h2>
+        <p style="text-align: center;">Entre em contato conosco pelo e-mail: <a href="mailto:videohubx.naruto@gmail.com">videohubx.naruto@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 VideoHubX - Naruto Edition. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
